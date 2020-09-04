@@ -13,3 +13,11 @@ class TestUser(unittest.TestCase):
         '''
         tearDown method that does clean up after each test case has run.
         '''
+        User.user_list = []
+
+    def test__init(self):
+        '''
+        check if class is initialiazing as expected
+        '''
+        self.assertEqual(self.new_user.user_name, "robajillo")
+        self.assertEqual(self.new_user.password, "robajillo2020")    
