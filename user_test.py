@@ -4,7 +4,7 @@ from user import User  # Importing the user class
 
 class TestUser(unittest.TestCase):
 
-    def setUp(self)
+    def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
