@@ -26,3 +26,10 @@ class user:
         for user_name in cls.user_list:
             if user.user_name == user_name:
                 return user
+
+    @classmethod
+    def display_user(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.contact_list       
