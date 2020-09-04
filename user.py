@@ -18,3 +18,11 @@ class user:
         delete user account
         '''
         User.user_list.remove(self)   
+    @classmethod
+    def find_user(cls,user_name):
+        '''
+        finding username
+        '''
+        for user_name in cls.user_list:
+            if user.user_name == user_name:
+                return user
