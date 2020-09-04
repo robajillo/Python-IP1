@@ -5,7 +5,11 @@ from user import User  # Importing the user class
 class TestUser(unittest.TestCase):
 
     def setUp(self)
-    '''
-     Set up method to run before each test cases.
-     '''
-    self.new_user = User("robajillo", "robajillo2020")  # Created new user
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_user = User("robajillo", "robajillo2020")  # Created new user
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
