@@ -3,12 +3,12 @@ from user import User  # Importing the user class
 
 
 class TestUser(unittest.TestCase):
-
     def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
         self.new_user = User("robajillo", "robajillo2020")  # Created new user
+
     def tearDown(self):
         '''
         tearDown method that does clean up after each test case has run.
@@ -34,6 +34,17 @@ class TestUser(unittest.TestCase):
         check if you can save multiple user_list
         '''
         self.new_user.save_user()
-        test_user = User("Test","password")
+        test_user = User("Test", "password")
         test_user.save_user()
-        self.assertEqual(len(User.user_list),2)
+        self.assertEqual(len(User.user_list), 2)
+
+    def test_delete_user(self):
+        '''
+        test if one can remove user account
+        '''
+        self.new_user.save_user()
+        test_user = User("Test", "password")  #new user
+        test_user.save_user()
+
+        self.new_user.delete_user()  # Deleting a user object
+        self.assertEqual(len(User.user_list), 1)
