@@ -28,8 +28,8 @@ class user:
                 return user
 
     @classmethod
-    def display_user(cls):
+    def display_users(cls):
         '''
         method that returns the user list
         '''
-        return cls.contact_list       
+        return cls.user_list       
