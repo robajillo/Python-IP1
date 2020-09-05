@@ -38,6 +38,13 @@ def save_credentials(credentials):
     method to save credentials
     '''
     credentials.save_credentials()
+
+def display_credentials():
+    '''
+    method to display all credentials
+    '''
+    return Credentials.display_credentials()
     
+
     
 
