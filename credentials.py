@@ -1,1 +1,3 @@
 import pyperclip
+class Credentials:
+    
