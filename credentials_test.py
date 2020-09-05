@@ -68,6 +68,12 @@ class TestCredentials(unittest.TestCase):
         credentials_exists = Credentials.credentials_exists("Yahoo")
         self.assertTrue(credentials_exists)
 
+        
+    def test_display_credentials(self):
+        '''
+        test if all credentials can be displayed
+        '''
+        self.assertEqual(Credentials.display_credentials(), Credentials.credentials_list)
 if __name__ == '__main__':
     unittest.main()
        
