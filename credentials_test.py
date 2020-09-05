@@ -48,15 +48,15 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list), 1)
 
-    # def test_search_for_credentials(self):
-    #     '''
-    #     test if credentials can be searched for
-    #     '''
-    #     self.new_credentials.save_credentials()
-    #     test_credentials = Credentials("Yahoo", "testuser","password")
-    #     test_credentials.save_credentials()
-    #     find_credentials= Credentials.find_account("Twitter")
-    #     self.assertEqual(find_credentials.account, test_credentials.account)
+    def test_search_for_credentials(self):
+        '''
+        test if credentials can be searched for
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Yahoo", "testuser","password")
+        test_credentials.save_credentials()
+        find_credentials= Credentials.find_account("Twitter")
+        self.assertEqual(find_credentials.account, test_credentials.account)
 if __name__ == '__main__':
     unittest.main()
        
