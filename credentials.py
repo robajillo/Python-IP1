@@ -21,3 +21,12 @@ class Credentials:
         delete credentials 
         '''
         Credentials.credentials_list.remove(self)   
+
+    @classmethod
+    def find_account(cls, account):
+        '''
+        search for accounts
+        '''
+        for credentials in cls.credentials_list:
+            if credentials.account == account:
+                return credentials   

@@ -55,7 +55,7 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.save_credentials()
         test_credentials = Credentials("Yahoo", "testuser","password")
         test_credentials.save_credentials()
-        find_credentials= Credentials.find_account("Twitter")
+        find_credentials= Credentials.find_account("Yahoo")
         self.assertEqual(find_credentials.account, test_credentials.account)
 if __name__ == '__main__':
     unittest.main()
