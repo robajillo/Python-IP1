@@ -19,3 +19,9 @@ def save_credentials(credentials):
     method to save credentials account
     '''
     credentials.save_credentials
+
+def find_user (user_name):
+    '''
+    method for finding user using user_name
+    '''
+    return User.find_user(user_name)
