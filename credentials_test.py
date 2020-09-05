@@ -38,15 +38,15 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)
 
-    # def test_delete_credentials(self):
-    #     '''
-    #     test if you can delete credentials test
-    #     '''
-    #     self.new_credentials.save_credentials()
-    #     test_credentials = Credentials("Yahoo", "testuser","password")
-    #     test_credentials.save_credentials()
-    #     self.new_credentials.delete_credentials()
-    #     self.assertEqual(len(Credentials.credentials_list), 1)
+    def test_delete_credentials(self):
+        '''
+        test if you can delete credentials test
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Yahoo", "testuser","password")
+        test_credentials.save_credentials()
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list), 1)
 
     # def test_search_for_credentials(self):
     #     '''
