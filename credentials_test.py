@@ -57,6 +57,17 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
         find_credentials= Credentials.find_account("Yahoo")
         self.assertEqual(find_credentials.account, test_credentials.account)
+
+    def test_confirm_credentials_exists(self):
+        '''
+        confirm that credentials exists
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Yahoo", "testuser","password")
+        test_credentials.save_credentials()
+        credentials_exists = Credentials.credentials_exists("Yahoo")
+        self.assertTrue(credentials_exists)
+
 if __name__ == '__main__':
     unittest.main()
        
