@@ -1,4 +1,4 @@
-class user:
+class User:
 
     '''
     class that generates new instance of user
@@ -6,12 +6,12 @@ class user:
 
     user_list = []
 
-    def__init__(self, user_name, password) :
+    def __init__ (self, user_name, password):
         self.user_name = user_name
 
         self.password = password
     def save_user(self):
-        User.user_list.append(self)
+         User.user_list.append(self)
 
     def delete_user(self):
         '''
@@ -23,13 +23,13 @@ class user:
         '''
         finding username
         '''
-        for user_name in cls.user_list:
+        for user in cls.user_list:
             if user.user_name == user_name:
                 return user
 
-    @classmethod
-    def display_users(cls):
-        '''
-        method that returns the user list
-        '''
-        return cls.user_list       
+    # @classmethod
+    # def display_users(cls):
+    #     '''
+    #     method that returns the user list
+    #     '''
+    #     return cls.user_list      
