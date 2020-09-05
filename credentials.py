@@ -12,7 +12,7 @@ class Credentials:
 
     def save_credentials(self):
         '''
-        self credentials in cred_list
+        self credentials in credentials_list
         '''
         Credentials.credentials_list.append(self)   
 
