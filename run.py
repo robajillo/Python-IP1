@@ -51,7 +51,12 @@ def find_account(account):
     '''
     return Credentials.find_account(account)   
     
-    
+def delete_cred(account):
+    '''
+    method to delete account
+    '''
+    account.delete_credentials() 
+       
 
 
     
