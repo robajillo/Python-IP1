@@ -44,7 +44,15 @@ def display_credentials():
     method to display all credentials
     '''
     return Credentials.display_credentials()
+
+def find_account(account):
+    '''
+    method to search for account 
+    '''
+    return Credentials.find_account(account)   
     
+    
+
 
     
 
