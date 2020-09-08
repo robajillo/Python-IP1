@@ -27,9 +27,19 @@ class User:
             if user.user_name == user_name:
                 return user
 
-    # @classmethod
-    # def display_users(cls):
-    #     '''
-    #     method that returns the user list
-    #     '''
-    #     return cls.user_list      
+    @classmethod
+    def log_in(cls,user_name, password):
+        '''
+        login to password locker
+        '''
+        for user in cls.user_list:
+            if user.user_name == user_name and user.password == user_password:
+                return user
+
+    @classmethod
+    def display_user(cls):
+        '''
+        Method that returns the user list
+        '''
+        
+        return cls.user_list
