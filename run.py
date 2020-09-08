@@ -82,7 +82,14 @@ def display_user():
     Function that returns all the saved users 
     '''
 
-    return User.display_user()      
+    return User.display_user()  
+
+def generate_password():
+    '''
+    Function to generate a password automatically
+    '''
+    gen_pass = Credentials.generate_password()
+    return gen_pass
 
 
 def main():
@@ -166,7 +173,7 @@ def main():
                 print("\n")
                 print(f'''login was successful dear {created_user_name} welcome to your Credentials\n
                 Use these short codes to get around''')
-                print("cc-create credentials account dc- display credentials su- sign up for an account note that the app will generate the password for you de- delete ex- exit")
+                print("cc-create credentials account dc- display credentials  ex- exit")
 
                 
                 
@@ -185,8 +192,14 @@ def main():
             print("Email ...")
             email = input()
 
-            print("Password...")
-            password = input()
+            print("Please choose an option for entering a password: 'ep'- to enter passsword and gp - to generate password")
+            password_choice = input()
+            if password_choice == 'ep':
+                print("enter your password...")
+                password = input()
+            elif password_choice == 'gp':
+                password = generate_password()
+                
 
             # Create and save new user
             save_credentials( create_credentials(  account, email, password) )
@@ -209,6 +222,7 @@ def main():
 
                 for credentials in display_credentials():
                     print(f"Account ..... {credentials.account}")
+                    print(f"Email......{credentials.email}")
                     print(f"Password .... {credentials.password}")
                     print("-"*10)
                     print("to delete credentials use 'de' ")
@@ -231,11 +245,7 @@ def main():
                 
 
 
-        elif short_code == 'su':
-            '''
-            signing up for account
-            '''
-
+        
 
         
         

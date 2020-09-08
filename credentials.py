@@ -1,4 +1,6 @@
 import pyperclip
+import string
+import random
 class Credentials:
     '''
     class that creates instances of user accounts
@@ -14,7 +16,15 @@ class Credentials:
         '''
         self credentials in credentials_list
         '''
-        Credentials.credentials_list.append(self)   
+        Credentials.credentials_list.append(self)  
+    def generate_password(size=10) : 
+        '''
+		method to generate 10 character password for a credential
+		'''
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~`!@#$%^&*()_-+=[{]}'\|?/>.,<"
+        gen_pass =''.join(random.choice(password) for i in range(size))
+        return gen_pass  
+    
 
     def delete_credentials(self):
         '''
