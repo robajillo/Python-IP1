@@ -32,6 +32,7 @@ application also manages login and signup credentials of a person for various ac
 #### Technologies Used
 
 * python3.8
+* markdown
 
 #### Dependencies
 dependencies include 
